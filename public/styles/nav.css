@@ -1,0 +1,30 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    width: 100vw;
+    background-color: #2b469f;
+    color: #FFFFFF;
+    padding-inline: 1.5em;
+    z-index: 1;
+  }
+  
+  nav span {
+    font-family: 'Bungee';
+    padding-top: 1.5em;
+  }
+  .write-new {
+    display: flex;
+    flex-flow: column wrap;
+    margin: .7em;
+  }
+  .new-tweet {
+    font-size: .7em;
+    margin-bottom: 0;
+  }
+  .icon {
+    align-self: center;
+    color: rgb(168, 52, 52);
+    font-size: medium;
+  }
