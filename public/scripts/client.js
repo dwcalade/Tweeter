@@ -57,7 +57,6 @@ $(document).ready(function () {
         $container.prepend(createTweetElement(arr[key]));
       })
       
-      console.log('this is the container:', $container)
       return $container;
     };
     
@@ -103,6 +102,7 @@ $(document).ready(function () {
     })
     .then(function (tweet) {
       renderTweets(tweet)
+      document.querySelector(".textarea").reset();
   });
   }
   loadTweets()
