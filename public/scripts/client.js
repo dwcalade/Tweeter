@@ -6,9 +6,14 @@
 
 $(document).ready(function () {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   //Slide the new tweet box
-  
+
   $('#arrow').click(
     function() {
       $('.new-tweet').slideDown()
@@ -27,7 +32,7 @@ $(document).ready(function () {
       </header>
       <main>
               <p>
-                ${tweet.content.text}
+              ${escape(tweet.content.text)}
               </p>
             </main>
             <footer id='tweet-foot'>
