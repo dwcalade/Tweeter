@@ -16,7 +16,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
        rel="stylesheet"
         />
 
@@ -38,10 +38,18 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/scripts/composer-char-counter.js"></script>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+   
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -68,14 +76,15 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container-main">
+      <p id="empty" class="error">Please enter some tweets</p>
+      <div id="long-error" class="error">
+        <p>Please limit your tweets to 140 characters</p>
+      </div>
 
-
-      <h1>COMPOSE TWEET</h1>
-      <p></p>
       <section class="new-tweet">
         <h2>What are you humming about?</h2>
-     <form method="POST" action="/tweets/" class="textarea">
+        <form method="POST" action="/tweets/" class="textarea">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="submit-control">
@@ -84,61 +93,8 @@
           </div>
         </form>
       </section>
-
-        <section class="tweet">
-          <article>
-            <header>
-              <div id='avatar'>
-              <img src='https://avatars.dicebear.com/api/adventurer-neutral/ll.......................svg'>
-              <h3>DW</h3>
-              </div>
-              <h4 id='username'>@Daddy</h4>
-  
-            </header>
-            <main>
-              <p>
-                I love Tennis
-              </p>
-            </main>
-            <footer id='tweet-foot'>
-              <div class='foot-content'>
-              <p>10 days ago</p>
-              <div id='icons'>
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-repeat"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-            </div>
-            </footer>
-          </article>
-        </section>
-  
-        <section class="tweet">
-          <article>
-            <header>
-              <div id='avatar'>
-              <img src='https://avatars.dicebear.com/api/adventurer-neutral/ll.......................svg'>
-              <h3>DW</h3>
-              </div>
-              <h4 id='username'>@Daddy</h4>
-  
-            </header>
-            <main>
-              <p>
-                Tracy is always right
-              </p>
-            </main>
-            <footer id='tweet-foot'>
-              <div class='foot-content'>
-              <p>10 days ago</p>
-              <div id='icons'>
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-repeat"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-            </div>
-            </footer>
-          </article>
-
-      </section>
-</html>
+    
+      </main>
+      <main class="container"></main>
+    </body>
+  </html>

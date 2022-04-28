@@ -36,3 +36,11 @@ new-tweet {
   .warning {
     color: red;
   } 
+  .error {
+    display: none;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border:red solid 2px;
+    min-height: 4rem;
+  }

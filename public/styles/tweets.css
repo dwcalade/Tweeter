@@ -1,5 +1,6 @@
 .tweet {
     margin-bottom: 4rem;
+    min-height: fit-content;
   }
   .tweet article header {
    display: flex;
@@ -7,23 +8,27 @@
    justify-content: space-between;
    background-color: inherit;
    background-image: none;
-   max-height: 5rem;
+   height: fit-content;
    margin: 0;
  }
  
- #avatar {
+ .avatar {
    display: flex;
    flex-direction: row;
    padding-top: 1.5rem;
  }
  h3 {
-   font-weight: 5000;
+   font-weight: 500;
+   width: fit-content;
  }
- 
- article {
+ #username {
+  color: gray;
+  padding-inline: 1rem;
+ }
+ .article {
    display: flex;
    flex-flow: row wrap;
-   max-height: 27rem;
+   /* max-height: 27rem; */
    border: black solid 3px;
    padding-inline: 2rem;
    font-weight: 600;
@@ -39,7 +44,6 @@
    width: 90vw;
  }
  
- m
  /* #username {
    fon
  } */
@@ -49,12 +53,14 @@
  }
  .foot-content {
    display: flex;
+   flex-flow: row wrap;
    justify-content: space-between;
    width: 82vw;
  }
  #icons{
    margin-top: 1.5rem;
    letter-spacing: .4rem;
+   padding: 1rem;
  }
  i:hover{
    color: rgb(248, 248, 13);
