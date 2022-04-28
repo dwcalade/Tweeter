@@ -1,9 +1,12 @@
 .new-tweet {
   display: none;
+  padding-left: 3rem;
+  width: 47vw;
+  margin-top: 5rem;
 } 
 
   #tweet-text {
-    width: 30rem;
+    width: 45vw;
     max-height: 2rem;
     background: none;
     outline: none;
@@ -38,9 +41,10 @@
   } 
   .error {
     display: none;
-    margin: auto;
+    margin-inline: 3rem;
     margin-top: 2rem;
     padding: 1rem;
     border:red solid 2px;
     min-height: 4rem;
+    text-align: center;
   }

@@ -10,30 +10,28 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', x;
-  display: flex;
+  font-family: 'Source Sans Pro';
 }
 
 
 .content {
   display: flex;
-  border: black 3px solid;
-  width: 100vw;
-  height:fit-content;
-  margin: 5px;
-  margin-top: 8rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 90%;
+  margin: auto;
 }
 
 .tweetdata {
-  width: 30rem;
+  width: 50vw;
+  justify-self: center;
+  margin-top: 6rem;
+  margin-inline: 3rem;
 }
 
 /*
