@@ -1,5 +1,5 @@
 .tweet {
-    margin-bottom: 4rem;
+    margin-block: 3rem;
     min-height: fit-content;
   }
   .tweet article header {
@@ -28,7 +28,6 @@
  .article {
    display: flex;
    flex-flow: row wrap;
-   /* max-height: 27rem; */
    border: black solid 3px;
    padding-inline: 2rem;
    font-weight: 600;
@@ -42,12 +41,9 @@
    border-bottom: 3px solid rgb(83, 54, 16);
    padding-block: 1rem;
    width: 90vw;
+   height: fit-content;
  }
- 
- /* #username {
-   fon
- } */
- 
+
  article footer p {
    font-size: 1.2rem;
  }
@@ -58,7 +54,6 @@
    width: 82vw;
  }
  #icons{
-   margin-top: 1.5rem;
    letter-spacing: .4rem;
    padding: 1rem;
  }
