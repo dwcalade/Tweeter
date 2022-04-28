@@ -19,13 +19,22 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', x;
+  display: flex;
 }
 
-main {
-  width: 90%;
-  margin: auto;
+
+.content {
+  display: flex;
+  border: black 3px solid;
+  width: 100vw;
+  height:fit-content;
+  margin: 5px;
+  margin-top: 8rem;
 }
 
+.tweetdata {
+  width: 30rem;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
