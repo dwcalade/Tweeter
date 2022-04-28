@@ -56,50 +56,45 @@
       <span class="logo">Tweeter</span>
       <div class="write-new">
         <p><b>Write</b> a new tweet</p>
-        <i class="fas fa-angle-double-down icon" id='arrow'></i>
+        <i class="fas fa-angle-double-down icon" id="arrow"></i>
       </div>
     </nav>
 
-    <section class='content'>
-    <header>
-      <div>
-          <img src="/images/profile-hex.png" />  
-      </div>
-      <br>
-      <div>
-        
-        <h2>Dominik W</h2>
-
-      </div>
-
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    <div class='tweetdata'></div>
-    <main class="container-main">
-      <p id="empty" class="error">Please enter some tweets</p>
-      <div id="long-error" class="error">
-        <p>Please limit your tweets to 140 characters</p>
-      </div>
-
-      <section class="new-tweet">
-        <h2>What are you humming about?</h2>
-        <form method="POST" action="/tweets/" class="textarea">
-          <label for="tweet-text"></label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="submit-control">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+    <div class="content">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div>
+          <h2>Your Name</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <div class="tweetdata">
+        <main class="container-main">
+          <p id="empty" class="error"> Please write some tweets </p>
+          <div id="long-error" class="error">
+            <p> Please limit your tweets to 140 characters </p>
           </div>
-        </form>
-      </section>
-    
-      </main>
-      <main class="container">
+        
+          <section class="new-tweet">
+            <h2>What are you humming about?</h2>
+            <form method="POST" action="/tweets/" class="textarea">
+              <label for="tweet-text"></label>
+              <textarea name="text" id="tweet-text"></textarea>
+              <div class="submit-control">
+                <button type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text"
+                  >140</output
+                >
+              </div>
+            </form>
+          </section>
+          
+          <main class="container"></main>
+        </div>
+      </div>
 
-      </main>
-    </section>
-  </div>
-  
     </body>
   </html>
