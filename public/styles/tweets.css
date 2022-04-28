@@ -8,6 +8,7 @@
    justify-content: space-between;
    background-color: inherit;
    background-image: none;
+   min-width: fit-content;
    height: fit-content;
    margin: 0;
  }

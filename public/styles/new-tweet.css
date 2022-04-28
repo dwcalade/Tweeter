@@ -3,7 +3,7 @@
 } 
 
   #tweet-text {
-    width: 90vw;
+    width: 30rem;
     max-height: 2rem;
     background: none;
     outline: none;
@@ -25,13 +25,13 @@
   }
   
   button {
-    background-color: #2114aa;
+    background-color: #170ba4;
     color: #FFFFFF;
     border: 0;
     padding-inline: .5rem;
   }
   button:hover {
-    background-color: #4056A1;
+    background-color: #3b5097;
   }
   .warning {
     color: red;
