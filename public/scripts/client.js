@@ -14,10 +14,10 @@ $(document).ready(function () {
 
   //Slide the new tweet box
 
-  $('#arrow').click(
-    function() {
-      $('.new-tweet').slideDown()
-    })
+  $("#arrow").click(function () {
+    $(".new-tweet").slideDown();
+  });
+
     const createTweetElement = function (tweet) {
   
       let $tweet = `
@@ -32,7 +32,13 @@ $(document).ready(function () {
       </header>
       <main>
               <p>
-              ${escape(tweet.content.text)}
+              ${escape(
+                tweet.content.text.length > 60
+                  ? tweet.content.text.slice(0, 60) +
+                      "\n" +
+                      tweet.content.text.slice(60, tweet.content.text.length)
+                  : tweet.content.text
+              )}
               </p>
             </main>
             <footer id='tweet-foot'>
@@ -47,33 +53,34 @@ $(document).ready(function () {
             
             </footer>
           </article>
-          </section>`
-        ;
+          </section>`;
       return $tweet;
     };
     const renderTweets = function (arr) {
       const $container = $(".container");
       $.each(arr, (key) => {
         $container.prepend(createTweetElement(arr[key]));
-      })
+      });
       
       return $container;
     };
     
-  //Submit form
+  //Submit the form
 
-  $( ".textarea" ).submit(function( event ) {
+  const $form = $(".textarea");
+
+  $form.submit(function (event) {
     event.preventDefault();
 
-    $('#empty').slideUp();
-    $('#long-error').slideUp();
-    $('.new-tweet').slideUp()
+    $("#empty").slideUp();
+    $("#long-error").slideUp();
+    $(".new-tweet").slideUp();
 
-    const newTweetData = event.target[0].value
+    const newTweetData = event.target[0].value;
     if (!newTweetData) {
-      $('#empty').slideDown()
-      $('.new-tweet').slideDown()
-      return
+      $("#empty").slideDown();
+      $(".new-tweet").slideDown();
+      return;
     }
 
     if (newTweetData.length > 140) {
@@ -86,22 +93,20 @@ $(document).ready(function () {
     $.ajax({
       method: "POST",
       url: "http://localhost:8080/tweets",
-      data: $( this ).serialize()
-    }).then( function () {
-      loadTweets()
-    }
-    )
+      data: $(this).serialize()
+    }).then(function () {
+      loadTweets();
+    });
   });
 
   //fetching tweets from /tweets page
 
-  const loadTweets = function() {
+  const loadTweets = function () {
     $.ajax({
-      method: 'GET',
-      url: 'http://localhost:8080/tweets',
-    })
-    .then(function (tweet) {
-      renderTweets(tweet)
+      method: "GET",
+      url: "http://localhost:8080/tweets",
+    }).then(function (tweet) {
+      renderTweets(tweet);
       document.querySelector(".textarea").reset();
   });
   }
