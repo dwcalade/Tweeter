@@ -4,9 +4,10 @@ header {
     justify-content: center;
     justify-self: center;
     align-items: center;
-    max-height: 35rem;
-    min-width: 35rem;
+    max-height: 45vh;
+    min-width: 17vw;
     background-color: #25008a;
     background-image: url("https://www.transparenttextures.com/patterns/always-grey.png");
     margin-top: 12rem;
-  }
+    margin-inline: auto;
+}
