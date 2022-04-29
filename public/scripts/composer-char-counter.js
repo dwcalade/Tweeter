@@ -1,9 +1,17 @@
-$(document).ready(function () {
-    $("#tweet-text").keyup(function () {
-      let charCount = $(this).val().length
-      let counterValue = 140
-      let currentValue = counterValue - charCount
-      $('.counter').text(currentValue).toggleClass('warning', currentValue < 0)
-     
-    })
-  })
+$(document).ready(function() {
+  $("#tweet-text").on("input", function () {
+    const maxChar = 140;
+    const inputChar = $(this).val().length;
+    const charCounter = maxChar - inputChar;
+
+    const $counterElement = $(this).parent().find(".counter");
+
+    $counterElement.text(charCounter);
+
+    if (charCounter < 0) {
+      $counterElement.addClass("invalid");
+    } else {
+      $counterElement.removeClass("invalid");
+    }
+  });
+});
