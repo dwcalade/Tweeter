@@ -1,3 +1,4 @@
+
 .new-tweet {
   display:flex;
   flex-direction: column;
@@ -28,17 +29,42 @@
 }
 
 #submit {  
-  background-color: #182e77;
+  background-color: #162966;
   color: white;
   border-style:groove;
   font-weight: bolder;
 }
 
 #submit:hover {  
-  background-color: rgb(169, 191, 221);
+  background-color: lightsteelblue;
 }
 
 .invalid {
   color: red
 }
 
+.error-message-box {
+    display: flex;
+    border: 3px solid red;
+    color: red;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+.fa-exclamation-triangle {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media only screen and (min-width: 1024px) {
+ .new-tweet {
+   width: 100%;
+ } 
+}

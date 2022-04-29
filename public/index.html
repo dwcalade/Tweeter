@@ -62,43 +62,34 @@
       </div>
     </header>
 
-      <!-- Page-specific (main) content here -->
-      <div class="tweetdata">
-        <main class="container-main">
-          <p id="empty" class="error"> Please write some tweets </p>
-          <div id="long-error" class="error">
-            <p> Please limit your tweets to 140 characters </p>
-          </div>
-        
-          <section class="new-tweet">
-            <h2>What are you humming about?</h2>
-            <form method="POST" action="/tweets/" class="textarea">
-              <label for="tweet-text"></label>
-              <textarea name="text" id="tweet-text"></textarea>
-              <div class="submit-control">
-                <button type="submit">Tweet</button>
-                <output name="counter" class="counter" for="tweet-text"
-                  >140</output
-                >
-              </div>
-            </form>
-          </section>
+   <!-- Page-specific (main) content here -->
+   <main class="main-container">
 
-          <main class="container"></main>
+      
+    <!--HTML for creating new tweet-->
+    <section class="new-tweet">
+      <h2 class="new-tweet-header">Write A Tweet</h2>
+      <span id="error-message-empty" class="error-message-box">
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+        Please enter some text before submitting a new Tweet!
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+      </span>
+      <span id="error-message-tooLong" class="error-message-box">
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+        Please reduce your tweet content to less than or equal to 140 characters!
+        <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+      </span>
+      <form action="/tweets" method="POST" id="new-tweet-form">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div class="new-tweet-footer">
+          <button id="submit" type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
-      </div>
-        <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      </form>
+    </section>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-    ></script>
-   
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script src="/scripts/composer-char-counter.js"></script>
-
-    </body>
+    <!--HTML for displaying created tweets, rendered in client.js-->
+    <section id="tweets-container"></section>
+</main>
+  </body>
   </html>

@@ -11,7 +11,29 @@ nav {
     padding-left: 1.5em;
     padding-right: 1.5em;
   }
+
+
+  .logo {
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+    font-size: 1.75rem;
+    font-family: 'Bungee';
+    justify-content: center;
+    flex-direction: column;
+  }
   
+  div.write-tweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  span.write-new-tweet {
+    font-size: 1rem;
+    font-family: "Arial Bold";
+  }
 
 
   @media only screen and (min-width: 1024px)  {
