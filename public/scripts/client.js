@@ -28,6 +28,11 @@ $(document).ready(function() {
       $('#tweets-container').append($tweet);
     }
   };
+  
+  $(".write-tweet").click(function () {
+    console.log("test")
+    $("#tweet-text").focus();
+  });
 
   //Creates a new tweet element (article) and feeds it information from the tweet data//
   const createTweetElement = function(tweetData) {
