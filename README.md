@@ -18,6 +18,9 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
+**Main Tweeter Page**
 !["Main Tweeter Page"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/Main.jpg)
+**Main Tweeter Page Mobile**
 !["Main Tweeter Page Mobile"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/MobileMain.jpg)
+**Error due to no words provided**
 !["Error due to no words provided"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/Error.jpg)
