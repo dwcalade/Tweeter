@@ -18,6 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 ## Screenshots
-!["screenshot description"](docs/MobileMain.jpg)
-!["screenshot description"](docs/Main.jpg)
-!["screenshot description"](docs/Error.jpg)
+!["screenshot description"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/Main.jpg)
+!["screenshot description"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/MobileMain.jpg)
+!["screenshot description"](https://github.com/dwcalade/Tweeter/blob/master/public/docs/Error.jpg)
